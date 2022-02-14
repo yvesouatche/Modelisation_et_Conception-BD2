@@ -2,7 +2,7 @@
 
 Identifions les différentes entités plus les propriétés pour cette application:
 
- * Hotel
+ ** Hotel
  
  - id_hotel
  
@@ -14,7 +14,7 @@ Identifions les différentes entités plus les propriétés pour cette applicati
  
  - telephone
  
- * Facture
+ ** Facture
  
  - num_facture
  
@@ -22,12 +22,12 @@ Identifions les différentes entités plus les propriétés pour cette applicati
  
  - quantite
  
- * Prestation
+ ** Prestation
  
  - code
  - designation
 
-* Consommation
+** Consommation
 
 - num_conso
 - DateConso
