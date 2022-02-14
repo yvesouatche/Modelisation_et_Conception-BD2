@@ -34,6 +34,7 @@ Identifions les différentes entités plus les propriétés pour cette applicati
 - HeureConso
 
 ** Categorie_Hotel
+
 - id_cateh
 - nb_etoile
 - caracteristique
@@ -43,4 +44,34 @@ Identifions les différentes entités plus les propriétés pour cette applicati
 - num_chambre
 - num_telephone
 
-**Categorie_Chambre
+** Categorie_Chambre
+
+- code
+- description
+
+** Reservation
+
+- num_reservation
+- DateDebut
+- DateFin
+- DatePayeArrhes
+- MontantPayeArrhes
+
+** Agence
+
+- id_agence
+- Nom
+- Adresse
+
+** Client
+
+- id_client
+- Nom
+- Prenom
+- adresse
+- ville
+- code postal
+- pays
+- telephone
+- email
+
