@@ -32,3 +32,15 @@ Identifions les différentes entités plus les propriétés pour cette applicati
 - num_conso
 - DateConso
 - HeureConso
+
+** Categorie_Hotel
+- id_cateh
+- nb_etoile
+- caracteristique
+
+** Chambre
+
+- num_chambre
+- num_telephone
+
+**Categorie_Chambre
