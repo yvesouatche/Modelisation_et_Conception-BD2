@@ -11,9 +11,18 @@ Identifions les différentes entités plus les propriétés pour cette applicati
  -Adresse
  
  -CPH
+ 
  -telephone
+ 
  * Facture
+ 
  -num_facture
+ 
  -prix
+ 
  -quantite
- * 
+ 
+ * Prestation
+ 
+ -code
+ -designation
