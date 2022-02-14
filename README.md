@@ -75,3 +75,4 @@
 - telephone
 - email
 
+2 - Identifier les différentes associations entre elles : Enregistrer,Classer,Prester,Etablir,Contenir,Posseder,Demander,Rserver,Concerner,Donner,Consommer,Presenter
