@@ -4,25 +4,31 @@ Identifions les différentes entités plus les propriétés pour cette applicati
 
  * Hotel
  
- -id_hotel
+ - id_hotel
  
- -Nom
+ - Nom
  
- -Adresse
+ - Adresse
  
- -CPH
+ - CPH
  
- -telephone
+ - telephone
  
  * Facture
  
- -num_facture
+ - num_facture
  
- -prix
+ - prix
  
- -quantite
+ - quantite
  
  * Prestation
  
- -code
- -designation
+ - code
+ - designation
+
+* Consommation
+
+- num_conso
+- DateConso
+- HeureConso
