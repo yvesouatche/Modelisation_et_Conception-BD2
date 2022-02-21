@@ -1,0 +1,106 @@
+CREATE TABLE Agence (
+  id_agence INT PRIMARY KEY NOT NULL,
+  nom VARCHAR(255),
+  adresse VARCHAR(255)
+);
+
+CREATE TABLE Categorie_Hotel (
+  code INT PRIMARY KEY NOT NULL ,
+  Nb_etoile] INT,
+  Caracteristique VARCHAR
+);
+
+
+
+CREATE TABLE Consommation (
+  num_conso INT PRIMARY KEY NOT NULL ,
+  DateConso DATE,
+  HeureConso DATETIME,
+  id_clt int
+  FOREIGN KEY(id_clt) REFERENCES Client(id_clt)
+);
+
+CREATE TABLE Hotel (
+  id_holel INT PRIMARY KEY NOT NULL ,
+  Nom VARCHAR(255),
+  Adresse VARCHAR(255),
+  CPH VARCHAR(255),
+  Telephone INT
+  code INT,
+  FOREIGN KEY(code) REFERENCES Categorie_Hotel(code)
+);
+
+CREATE TABLE Facture (
+  num_facture INT PRIMARY KEY NOT NULL,
+  prix DOUBLE,
+  quantite INT,
+  id_hotel INT,
+  FOREIGN KEY(id_hotel) REFERENCES Hotel(id_hotel)
+);
+
+CREATE TABLE Chambre (
+  num_chambre INT PRIMARY KEY,
+  num_telephone INT,
+  id_hotel INT,
+  code INT,
+  FOREIGN KEY(id_hotel) REFERENCES Hotel(id_hotel),
+  FOREIGN KEY(Code) REFERENCES Categorie_Chambre(Code)
+);
+
+CREATE TABLE Client (
+  id_clt INT PRIMARY KEY NOT NULL,
+  nom VARCHAR(255),
+  prenom VARCHAR(255),
+  adresse VARCHAR(255),
+  ville VARCHAR(255),
+  codepostal VARCHAR(255),
+  pays VARCHAR(255),
+  telephone VARCHAR(255),
+  email VARCHAR(255),
+  num_facture INT,
+  FOREIGN KEY(num_facture) REFERENCES Facture(num_facture)
+);
+
+CREATE TABLE Prestation (
+  code INT PRIMARY KEY NOT NULl,
+  Designation VARCHAR(255),
+  id_hotel INT,
+  FOREIGN KEY(id_hotel) REFERENCES Hotel(id_hotel)
+);
+
+CREATE TABLE Reservation (
+  num_reservation INT PRIMARY KEY NOT NULL,
+  DateDebut DATE,
+  DateFin DATE,
+  DatePayeArres DATE,
+  MontantArres DATE,
+  id_agence INT,
+  num_chambre INT,
+  id_clt INT,
+  FOREIGN KEY(id_agence) REFERENCES Agence(id_agence),
+  FOREIGN KEY(num_chambre) REFERENCES Chambre(num_chambre)
+  FOREIGN KEY(id_clt) REFERENCES Client(id_clt)
+);
+
+CREATE TABLE Categorie_Chambre (
+  Code INT PRIMARY KEY NOT NULL,
+  Description VARCHAR(255),
+);
+
+CREATE TABLE Enregistrer(
+id INT PRIMARY KEY NOT NULL
+num_conso int
+id_hotel int
+FOREIGN KEY(num_conso) REFERENCES Consommation(num_conso)
+FOREIGN KEY(id_hotel) REFERENCES Hotel(id_hotel)
+);
+
+CREATE TABLE Prester(
+id_prester INT PRIMARY KEY NOT NULL
+id_clt int
+code int
+FOREIGN KEY(id_clt) REFERENCES Client(id_clt)
+FOREIGN KEY(code) REFERENCES Prestation(code)
+);
+
+
